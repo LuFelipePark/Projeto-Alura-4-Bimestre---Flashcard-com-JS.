@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #243d6b,
+            #0d1422 55%,
+            #070b12
+        );
+
+    color: white;
+
+    padding: 35px 20px;
+}
+
+
+.pagina {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 45px;
+}
+
+
+.logo {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #e8b84b;
+
+    font-size: 38px;
+
+    box-shadow:
+        0 0 35px
+        rgba(232,184,75,.35);
+}
+
+
+header h1 {
+    font-size: 32px;
+
+    letter-spacing: 3px;
+}
+
+
+header p {
+    color: #aab6ca;
+
+    margin-top: 7px;
+}
+
+
+/* =========================
+   APRESENTAÇÃO
+========================= */
+
+.apresentacao {
+    max-width: 750px;
+
+    margin: auto;
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.tag {
+    display: inline-block;
+
+    color: #e8b84b;
+
+    border: 1px solid
+        rgba(232,184,75,.35);
+
+    background:
+        rgba(232,184,75,.08);
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+
+.apresentacao h2 {
+    font-size: 34px;
+
+    margin-bottom: 15px;
+}
+
+
+.apresentacao p {
+    color: #aeb8c8;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+}
+
+
+.card-container {
+    height: 390px;
+
+    perspective: 1200px;
+
+    cursor: pointer;
+}
+
+
+.card {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform .8s
+        cubic-bezier(.2,.7,.2,1);
+}
+
+
+.card-container.virado .card {
+    transform:
+        rotateY(180deg);
+}
+
+
+/* =========================
+   FACES
+========================= */
+
+.face {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    backface-visibility: hidden;
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px solid
+        rgba(255,255,255,.1);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.03)
+        );
+
+    box-shadow:
+        0 20px 45px
+        rgba(0,0,0,.3);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.frente {
+    transform: rotateY(0deg);
+}
+
+
+.verso {
+    transform: rotateY(180deg);
+
+    background:
+        linear-gradient(
+            145deg,
+            #18263e,
+            #0c1320
+        );
+}
+
+
+/* =========================
+   ÍCONES
+========================= */
+
+.icone-card {
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(255,255,255,.12)
+        );
+}
+
+
+/* =========================
+   TEXTOS
+========================= */
+
+.face h3 {
+    font-size: 27px;
+
+    margin-bottom: 12px;
+}
+
+
+.face p {
+    color: #aeb8c8;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+.categoria {
+    color: #e8b84b;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+
+.clique {
+    color: #718096;
+
+    font-size: 11px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   CORES DOS ESPORTES
+========================= */
+
+.futebol {
+    border-color:
+        rgba(78,205,196,.25);
+}
+
+
+.volei {
+    border-color:
+        rgba(126,156,255,.25);
+}
+
+
+.futebol-verso {
+    border-color:
+        rgba(78,205,196,.4);
+}
+
+
+.volei-verso {
+    border-color:
+        rgba(126,156,255,.4);
+}
+
+
+/* =========================
+   INFORMAÇÕES DO VERSO
+========================= */
+
+.informacao {
+    width: 100%;
+
+    text-align: left;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    margin-top: 10px;
+}
+
+
+.informacao strong {
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+
+    color: #e8b84b;
+}
+
+
+.informacao span {
+    color: #aeb8c8;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   EFEITO DO MOUSE
+========================= */
+
+.card-container:hover {
+    transform: translateY(-7px);
+
+    transition: .25s;
+}
+
+
+.card-container:hover .face {
+    box-shadow:
+        0 25px 55px
+        rgba(0,0,0,.4);
+}
+
+
+/* =========================
+   CHAVEAMENTO
+========================= */
+
+.chaveamento {
+    text-align: center;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    margin-bottom: 40px;
+}
+
+
+.chaveamento h2 {
+    font-size: 26px;
+
+    margin-bottom: 10px;
+}
+
+
+.chaveamento > p {
+    color: #909caf;
+
+    margin-bottom: 30px;
+}
+
+
+.fluxo {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.fluxo div {
+    min-width: 150px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: #111827;
+
+    border: 1px solid #263147;
+}
+
+
+.fluxo strong {
+    display: block;
+
+    color: #e8b84b;
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+
+.fluxo span {
+    display: block;
+
+    color: #aab5c8;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+
+.fluxo b {
+    color: #e8b84b;
+
+    font-size: 25px;
+}
+
+
+.fluxo .final {
+    border-color:
+        rgba(232,184,75,.45);
+
+    box-shadow:
+        0 0 20px
+        rgba(232,184,75,.08);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    color: #65738a;
+
+    font-size: 12px;
+
+    padding: 10px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 850px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card-container {
+        max-width: 450px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+
+
+    .fluxo {
+        flex-direction: column;
+    }
+
+
+    .fluxo b {
+        transform: rotate(90deg);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+
+    header h1 {
+        font-size: 23px;
+    }
+
+
+    header p {
+        font-size: 13px;
+    }
+
+
+    .apresentacao h2 {
+        font-size: 27px;
+    }
+
+
+    .face {
+        padding: 25px;
+    }
+
+}

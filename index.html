@@ -1,0 +1,391 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interclasse da Escola</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="pagina">
+
+        <!-- CABEÇALHO -->
+
+        <header>
+
+            <div class="logo">
+                🏆
+            </div>
+
+            <div>
+                <h1>INTERCLASSE</h1>
+
+                <p>
+                    Esporte, competição e união entre as turmas
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="apresentacao">
+
+            <span class="tag">
+                EVENTO ESCOLAR
+            </span>
+
+            <h2>
+                Bem-vindo ao Interclasse!
+            </h2>
+
+            <p>
+                O Interclasse reúne estudantes de diferentes
+                turmas em uma competição esportiva marcada
+                por diversão, respeito e espírito de equipe.
+            </p>
+
+        </section>
+
+
+        <!-- CARDS -->
+
+        <section class="cards">
+
+
+            <!-- CARD INTERCLASSE -->
+
+            <div class="card-container"
+                 onclick="virarCard(this)">
+
+                <div class="card">
+
+                    <!-- FRENTE -->
+
+                    <div class="face frente">
+
+                        <div class="icone-card">
+                            🏆
+                        </div>
+
+                        <span class="categoria">
+                            SOBRE O EVENTO
+                        </span>
+
+                        <h3>
+                            Interclasse
+                        </h3>
+
+                        <p>
+                            Descubra como funciona
+                            o campeonato da escola.
+                        </p>
+
+                        <span class="clique">
+                            Clique para saber mais ↻
+                        </span>
+
+                    </div>
+
+
+                    <!-- VERSO -->
+
+                    <div class="face verso">
+
+                        <div class="icone-card">
+                            🎓
+                        </div>
+
+                        <h3>
+                            Como funciona?
+                        </h3>
+
+                        <p>
+                            O Interclasse coloca diferentes
+                            turmas da escola para competir
+                            em modalidades esportivas.
+                        </p>
+
+                        <p>
+                            Além da competição, o evento
+                            busca promover integração,
+                            respeito e trabalho em equipe.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD FUTEBOL -->
+
+            <div class="card-container"
+                 onclick="virarCard(this)">
+
+                <div class="card">
+
+                    <!-- FRENTE -->
+
+                    <div class="face frente futebol">
+
+                        <div class="icone-card">
+                            ⚽
+                        </div>
+
+                        <span class="categoria">
+                            MODALIDADE
+                        </span>
+
+                        <h3>
+                            Futebol
+                        </h3>
+
+                        <p>
+                            A modalidade que coloca
+                            as turmas frente a frente.
+                        </p>
+
+                        <span class="clique">
+                            Clique para saber mais ↻
+                        </span>
+
+                    </div>
+
+
+                    <!-- VERSO -->
+
+                    <div class="face verso futebol-verso">
+
+                        <div class="icone-card">
+                            ⚽
+                        </div>
+
+                        <h3>
+                            Futebol
+                        </h3>
+
+                        <p>
+                            As equipes representam suas
+                            respectivas turmas em partidas
+                            eliminatórias.
+                        </p>
+
+                        <div class="informacao">
+                            <strong>
+                                ⚽ Objetivo
+                            </strong>
+
+                            <span>
+                                Marcar mais gols que
+                                o adversário.
+                            </span>
+                        </div>
+
+                        <div class="informacao">
+                            <strong>
+                                🏆 Competição
+                            </strong>
+
+                            <span>
+                                As equipes avançam pelas
+                                fases até a grande final.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD VÔLEI -->
+
+            <div class="card-container"
+                 onclick="virarCard(this)">
+
+                <div class="card">
+
+                    <!-- FRENTE -->
+
+                    <div class="face frente volei">
+
+                        <div class="icone-card">
+                            🏐
+                        </div>
+
+                        <span class="categoria">
+                            MODALIDADE
+                        </span>
+
+                        <h3>
+                            Vôlei
+                        </h3>
+
+                        <p>
+                            Estratégia, comunicação e
+                            trabalho em equipe.
+                        </p>
+
+                        <span class="clique">
+                            Clique para saber mais ↻
+                        </span>
+
+                    </div>
+
+
+                    <!-- VERSO -->
+
+                    <div class="face verso volei-verso">
+
+                        <div class="icone-card">
+                            🏐
+                        </div>
+
+                        <h3>
+                            Vôlei
+                        </h3>
+
+                        <p>
+                            As equipes se enfrentam
+                            utilizando passes, levantamentos
+                            e ataques para marcar pontos.
+                        </p>
+
+                        <div class="informacao">
+                            <strong>
+                                🏐 Objetivo
+                            </strong>
+
+                            <span>
+                                Fazer a bola tocar
+                                na quadra adversária.
+                            </span>
+                        </div>
+
+                        <div class="informacao">
+                            <strong>
+                                🤝 Trabalho em equipe
+                            </strong>
+
+                            <span>
+                                Comunicação e organização
+                                são fundamentais.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- CHAVEAMENTO -->
+
+        <section class="chaveamento">
+
+            <span class="tag">
+                CAMPEONATO
+            </span>
+
+            <h2>
+                Quem será o campeão?
+            </h2>
+
+            <p>
+                As turmas avançam pelas fases do
+                campeonato até chegar à grande final.
+            </p>
+
+
+            <div class="fluxo">
+
+                <div>
+                    <strong>
+                        TURMAS
+                    </strong>
+
+                    <span>
+                        A × B
+                    </span>
+
+                    <span>
+                        C × D
+                    </span>
+                </div>
+
+
+                <b>→</b>
+
+
+                <div>
+                    <strong>
+                        SEMIFINAL
+                    </strong>
+
+                    <span>
+                        Vencedores
+                    </span>
+                </div>
+
+
+                <b>→</b>
+
+
+                <div class="final">
+                    <strong>
+                        🏆 FINAL
+                    </strong>
+
+                    <span>
+                        Campeão
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RODAPÉ -->
+
+        <footer>
+
+            <span>
+                🏆 Interclasse Escolar
+            </span>
+
+            <span>
+                •
+            </span>
+
+            <span>
+                Esporte e integração
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
